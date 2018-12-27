@@ -17,6 +17,9 @@
             <comments>A business-friendly OSS license</comments>
         </license>
     </licenses>
+    <modules>
+        <module>micro-registry</module>
+    </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -36,6 +39,7 @@
         <mapper.version>3.4.0</mapper.version>
         <maven.compile.source>1.8</maven.compile.source>
         <maven.compile.target>1.8</maven.compile.target>
+        <spring.boot.admin.version>2.1.1</spring.boot.admin.version>
     </properties>
 
     <dependencyManagement>
@@ -56,6 +60,11 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>1.2.54</version>
+            </dependency>
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-starter-client</artifactId>
+                <version>2.1.1</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
