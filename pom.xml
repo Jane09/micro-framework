@@ -22,6 +22,9 @@
         <module>micro-common</module>
         <module>micro-gate</module>
         <module>micro-security</module>
+        <module>micro-monitor</module>
+        <module>micro-trace</module>
+        <module>micro-sidecar</module>
     </modules>
 
     <parent>
