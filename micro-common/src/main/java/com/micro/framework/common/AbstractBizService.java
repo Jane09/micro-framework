@@ -10,8 +10,6 @@ import tk.mybatis.mapper.entity.Example;
 
 import java.lang.reflect.ParameterizedType;
 import java.util.List;
-import java.util.Map;
-
 /**
  * @author tb
  * @date 2018/12/27 16:21
