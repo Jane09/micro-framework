@@ -1,5 +1,7 @@
 package com.micro.framework.common.handler;
 
+import com.micro.framework.common.constant.Global;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -29,7 +31,45 @@ public final class ContextHandler {
         return map.get(key);
     }
 
+    public static void remove() {
+        threadLocal.remove();
+    }
+
+    private static String getValue(String key) {
+        return objectToString(get(key));
+    }
+
     private static String objectToString(Object value) {
         return null == value?"":String.valueOf(value);
+    }
+
+
+
+    public static String getUserId() {
+        return getValue(Global.CONTEXT_KEY_USER_ID);
+    }
+
+    public static String getUsername() {
+        return getValue(Global.CONTEXT_KEY_USER_NAME);
+    }
+
+    public static String getUser(){
+        return getValue(Global.CONTEXT_KEY_USER);
+    }
+
+    public static String getToken(){
+        return getValue(Global.CONTEXT_KEY_USER_TOKEN);
+    }
+
+    public static void setToken(String token){set(Global.CONTEXT_KEY_USER_TOKEN,token);}
+
+    public static void setUsername(String username){set(Global.CONTEXT_KEY_USER_NAME,username);}
+
+    public static void setUserID(String userId){
+        set(Global.CONTEXT_KEY_USER_ID,userId);
+    }
+
+    public static void setUser(String user){
+        set(Global.CONTEXT_KEY_USER,user);
     }
 }
