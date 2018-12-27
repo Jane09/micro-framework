@@ -5,6 +5,7 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 public interface BizService<T> {
     String UNKNOWN = "unknown";
@@ -16,6 +17,12 @@ public interface BizService<T> {
     String HEADER_USERID = "userId";
     String[] CREATE_FIELDS = {"createBy","createAt","createIp"};
     String[] UPDATE_FIELDS = {"updateBy","updateAt","updateIp"};
+
+    T selectOne(T entity);
+    T findById(Object id);
+    List<T> findByEntity(T entity);
+    List<T> findAll();
+    Long count(T entity);
 
     default void fill(T entity) {
         fillCreate(entity);
