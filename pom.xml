@@ -19,6 +19,7 @@
     </licenses>
     <modules>
         <module>micro-registry</module>
+        <module>micro-common</module>
     </modules>
 
     <parent>
@@ -64,6 +65,11 @@
             <dependency>
                 <groupId>de.codecentric</groupId>
                 <artifactId>spring-boot-admin-starter-client</artifactId>
+                <version>2.1.1</version>
+            </dependency>
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-starter-server</artifactId>
                 <version>2.1.1</version>
             </dependency>
         </dependencies>
