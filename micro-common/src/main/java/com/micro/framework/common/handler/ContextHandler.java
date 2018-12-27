@@ -11,20 +11,20 @@ import java.util.Map;
  */
 public final class ContextHandler {
 
-    private static ThreadLocal<Map<String,Object>> threadLocal = new ThreadLocal<>();
+    private static ThreadLocal<Map<String, Object>> threadLocal = new ThreadLocal<>();
 
     private static void set(String key, Object value) {
-        Map<String,Object> map = threadLocal.get();
-        if(null == map) {
+        Map<String, Object> map = threadLocal.get();
+        if (null == map) {
             map = new HashMap<>(16);
             threadLocal.set(map);
         }
-        map.put(key,value);
+        map.put(key, value);
     }
 
     private static Object get(String key) {
-        Map<String,Object> map = threadLocal.get();
-        if(null == map) {
+        Map<String, Object> map = threadLocal.get();
+        if (null == map) {
             map = new HashMap<>(16);
             threadLocal.set(map);
         }
@@ -40,9 +40,8 @@ public final class ContextHandler {
     }
 
     private static String objectToString(Object value) {
-        return null == value?"":String.valueOf(value);
+        return null == value ? "" : String.valueOf(value);
     }
-
 
 
     public static String getUserId() {
@@ -53,23 +52,27 @@ public final class ContextHandler {
         return getValue(Global.CONTEXT_KEY_USER_NAME);
     }
 
-    public static String getUser(){
+    public static String getUser() {
         return getValue(Global.CONTEXT_KEY_USER);
     }
 
-    public static String getToken(){
+    public static String getToken() {
         return getValue(Global.CONTEXT_KEY_USER_TOKEN);
     }
 
-    public static void setToken(String token){set(Global.CONTEXT_KEY_USER_TOKEN,token);}
-
-    public static void setUsername(String username){set(Global.CONTEXT_KEY_USER_NAME,username);}
-
-    public static void setUserID(String userId){
-        set(Global.CONTEXT_KEY_USER_ID,userId);
+    public static void setToken(String token) {
+        set(Global.CONTEXT_KEY_USER_TOKEN, token);
     }
 
-    public static void setUser(String user){
-        set(Global.CONTEXT_KEY_USER,user);
+    public static void setUsername(String username) {
+        set(Global.CONTEXT_KEY_USER_NAME, username);
+    }
+
+    public static void setUserID(String userId) {
+        set(Global.CONTEXT_KEY_USER_ID, userId);
+    }
+
+    public static void setUser(String user) {
+        set(Global.CONTEXT_KEY_USER, user);
     }
 }
