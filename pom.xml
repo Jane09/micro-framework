@@ -12,6 +12,9 @@
         <module>config-center</module>
         <module>eureka-master</module>
         <module>eureka-slave</module>
+        <module>gateway</module>
+        <module>monitor</module>
+        <module>security</module>
     </modules>
 
     <parent>
