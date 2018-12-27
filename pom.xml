@@ -6,7 +6,13 @@
 
     <groupId>com.micro.framework</groupId>
     <artifactId>micro-framework</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>config-center</module>
+        <module>eureka-master</module>
+        <module>eureka-slave</module>
+    </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
