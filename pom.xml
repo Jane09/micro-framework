@@ -25,6 +25,8 @@
         <module>micro-monitor</module>
         <module>micro-trace</module>
         <module>micro-sidecar</module>
+        <module>micro-interface</module>
+        <module>micro-generator</module>
     </modules>
 
     <parent>
@@ -76,6 +78,21 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>1.2.54</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>1.1.10</version>
+            </dependency>
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper-spring-boot-starter</artifactId>
+                <version>2.1.2</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>1.2.10</version>
             </dependency>
             <dependency>
                 <groupId>de.codecentric</groupId>
