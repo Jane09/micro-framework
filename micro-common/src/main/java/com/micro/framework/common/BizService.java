@@ -23,6 +23,15 @@ public interface BizService<T> {
     List<T> findByEntity(T entity);
     List<T> findAll();
     Long count(T entity);
+    void insert(T entity);
+    void insertSelective(T entity);
+    void update(T entity);
+    void updateSelective(T entity);
+    void delete(T entity);
+    void deleteById(Object id);
+    List<T> selectByExample(Object example);
+    int countByExample(Object example);
+
 
     default void fill(T entity) {
         fillCreate(entity);
