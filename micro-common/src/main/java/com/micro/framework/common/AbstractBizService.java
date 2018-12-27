@@ -1,10 +1,16 @@
 package com.micro.framework.common;
 
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
+import com.micro.framework.common.response.TableResponse;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import tk.mybatis.mapper.common.Mapper;
+import tk.mybatis.mapper.entity.Example;
 
+import java.lang.reflect.ParameterizedType;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author tb
@@ -76,5 +82,20 @@ public abstract class AbstractBizService<M extends Mapper<T>,T> implements BizSe
     @Override
     public int countByExample(Object example) {
         return mapper.selectCountByExample(example);
+    }
+
+    @SuppressWarnings("unchecked")
+    public TableResponse<T> selectByQuery(Query query) {
+        Class<T> clazz = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[1];
+        Example example = new Example(clazz);
+        if(query.entrySet().size()>0) {
+            Example.Criteria criteria = example.createCriteria();
+            for (Map.Entry<String, Object> entry : query.entrySet()) {
+                criteria.andLike(entry.getKey(), "%" + entry.getValue().toString() + "%");
+            }
+        }
+        Page<Object> result = PageHelper.startPage(query.getPage(), query.getLimit());
+        List<T> list = mapper.selectByExample(example);
+        return new TableResponse<>(result.getTotal(), list);
     }
 }
