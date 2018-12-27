@@ -90,9 +90,7 @@ public abstract class AbstractBizService<M extends Mapper<T>,T> implements BizSe
         Example example = new Example(clazz);
         if(query.entrySet().size()>0) {
             Example.Criteria criteria = example.createCriteria();
-            for (Map.Entry<String, Object> entry : query.entrySet()) {
-                criteria.andLike(entry.getKey(), "%" + entry.getValue().toString() + "%");
-            }
+            query.forEach((key,value) -> criteria.andLike(key, "%" + value + "%"));
         }
         Page<Object> result = PageHelper.startPage(query.getPage(), query.getLimit());
         List<T> list = mapper.selectByExample(example);
