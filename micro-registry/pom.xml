@@ -10,6 +10,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>micro-registry</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>micro-registry-eureka</module>
+        <module>micro-registry-consul</module>
+    </modules>
 
     <dependencies>
         <dependency>
