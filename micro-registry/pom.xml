@@ -16,6 +16,7 @@
         <module>micro-registry-consul</module>
         <module>micro-registry-zk</module>
         <module>micro-registry-etcd</module>
+        <module>micro-registry-consul-client</module>
     </modules>
 
 </project>
