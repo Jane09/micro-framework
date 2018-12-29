@@ -27,6 +27,7 @@
         <module>micro-sidecar</module>
         <module>micro-interface</module>
         <module>micro-generator</module>
+        <module>micro-config</module>
     </modules>
 
     <parent>
