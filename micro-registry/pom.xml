@@ -14,6 +14,8 @@
     <modules>
         <module>micro-registry-eureka</module>
         <module>micro-registry-consul</module>
+        <module>micro-registry-zk</module>
+        <module>micro-registry-etcd</module>
     </modules>
 
     <dependencies>
