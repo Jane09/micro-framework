@@ -15,7 +15,7 @@ spring:
     mode: LEGACYHTML5
     cache: false
 server:
-  port: 777
+  port: 7777
   tomcat:
     max-threads: 10
     min-spare-threads: 10

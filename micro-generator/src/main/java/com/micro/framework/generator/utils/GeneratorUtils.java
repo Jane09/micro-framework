@@ -50,7 +50,7 @@ public final class GeneratorUtils {
         //表名转换成Java类名
         String className = tableToJava(tableEntity.getTableName(), config.getString("tablePrefix"));
         tableEntity.setClassName(className);
-        tableEntity.setClassname(StringUtils.uncapitalize(className));
+        tableEntity.setClazzName(StringUtils.uncapitalize(className));
 
         //列信息
         List<ColumnEntity> columsList = new ArrayList<>();
@@ -64,7 +64,7 @@ public final class GeneratorUtils {
             //列名转换成Java属性名
             String attrName = columnToJava(columnEntity.getColumnName());
             columnEntity.setAttrName(attrName);
-            columnEntity.setAttrname(StringUtils.uncapitalize(attrName));
+            columnEntity.setAttrName2(StringUtils.uncapitalize(attrName));
 
             //列的数据类型，转换成Java类型
             String attrType = config.getString(columnEntity.getDataType(), "unknowType");
@@ -95,8 +95,8 @@ public final class GeneratorUtils {
         map.put("comments", tableEntity.getComments());
         map.put("pk", tableEntity.getPk());
         map.put("className", tableEntity.getClassName());
-        map.put("classname", tableEntity.getClassname());
-        map.put("pathName", tableEntity.getClassname().toLowerCase());
+        map.put("classname", tableEntity.getClazzName());
+        map.put("pathName", tableEntity.getClazzName().toLowerCase());
         map.put("columns", tableEntity.getColumns());
         map.put("package", config.getString("package"));
         map.put("author", config.getString("author"));

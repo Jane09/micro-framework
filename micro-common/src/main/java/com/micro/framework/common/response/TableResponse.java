@@ -10,7 +10,6 @@ import java.util.List;
  */
 @Getter
 @Setter
-@Builder
 public class TableResponse<T> {
 
     private Table<T> data;
