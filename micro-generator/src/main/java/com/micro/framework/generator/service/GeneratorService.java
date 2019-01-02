@@ -2,6 +2,7 @@ package com.micro.framework.generator.service;
 
 import com.micro.framework.generator.mapper.GeneratorMapper;
 import com.micro.framework.generator.utils.GeneratorUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.stereotype.Service;
 
@@ -48,6 +49,9 @@ public class GeneratorService {
         ZipOutputStream zip = new ZipOutputStream(outputStream);
 
         for(String tableName : tableNames){
+            if(StringUtils.isBlank(tableName)){
+                continue;
+            }
             //查询表信息
             Map<String, String> table = queryTable(tableName);
             //查询列信息

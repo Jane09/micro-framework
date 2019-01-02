@@ -28,11 +28,11 @@ public class ${className} implements Serializable {
 	#if($column.columnName == $pk.columnName)
     //$column.comments
     @Id
-    private $column.attrType $column.attrname;
+    private $column.attrType $column.attrName2;
 	#else
     //$column.comments
     @Column(name = "$column.columnName")
-    private $column.attrType $column.attrname;
+    private $column.attrType $column.attrName2;
 	#end
 
 #end
@@ -41,14 +41,14 @@ public class ${className} implements Serializable {
 ##	/**
 ##	 * 设置：${column.comments}
 ##	 */
-##	public void set${column.attrName}($column.attrType $column.attrname) {
-##		this.$column.attrname = $column.attrname;
+##	public void set${column.attrName2}($column.attrType $column.attrName2) {
+##		this.$column.attrName2 = $column.attrName2;
 ##	}
 ##	/**
 ##	 * 获取：${column.comments}
 ##	 */
-##	public $column.attrType get${column.attrName}() {
-##		return $column.attrname;
+##	public $column.attrType get${column.attrName2}() {
+##		return $column.attrName2;
 ##	}
 ###end
 }

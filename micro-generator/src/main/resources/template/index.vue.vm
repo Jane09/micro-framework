@@ -11,13 +11,13 @@
   #if($column.columnName == $pk.columnName)
     <el-table-column align="center" label="${column.columnName}" width="65">
       <template scope="scope">
-        <span>{{scope.row.${column.attrname}}}</span>
+        <span>{{scope.row.${column.attrName2}}}</span>
       </template>
     </el-table-column>
   #else
     <el-table-column width="200px" align="center" label="${column.comments}">
       <template scope="scope">
-        <span>{{scope.row.${column.attrname}}}</span>
+        <span>{{scope.row.${column.attrName2}}}</span>
       </template>
     </el-table-column>
   #end
@@ -36,8 +36,8 @@
       <el-form :model="form" :rules="rules" ref="form" label-width="100px">
 #foreach($column in $columns)
   #if($column.columnName != $pk.columnName)
-    <el-form-item label="${column.comments}" prop="${column.attrname}">
-      <el-input v-model="form.${column.attrname}" placeholder="请输入${column.comments}"></el-input>
+    <el-form-item label="${column.comments}" prop="${column.attrName2}">
+      <el-input v-model="form.${column.attrName2}" placeholder="请输入${column.comments}"></el-input>
     </el-form-item>
   #end
 #end
@@ -67,14 +67,14 @@
         form: {
 #foreach($column in $columns)
   #if($column.columnName != $pk.columnName)
-    ${column.attrname} : undefined#if($velocityCount != $columns.size()),#end
+    ${column.attrName2} : undefined#if($velocityCount != $columns.size()),#end
   #end
 #end
         },
         rules: {
 #foreach($column in $columns)
   #if($column.columnName != $pk.columnName)
-${column.attrname}: [
+${column.attrName2}: [
   {
     required: true,
     message: '请输入${column.comments}',

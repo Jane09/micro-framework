@@ -26,13 +26,13 @@ import java.util.zip.ZipOutputStream;
 public final class GeneratorUtils {
 
     private static final List<String> TEMPLATES = new ArrayList<String>(){{
-        TEMPLATES.add("template/index.js.vm");
-        TEMPLATES.add("template/index.vue.vm");
-        TEMPLATES.add("template/mapper.xml.vm");
-        TEMPLATES.add("template/biz.java.vm");
-        TEMPLATES.add("template/entity.java.vm");
-        TEMPLATES.add("template/mapper.java.vm");
-        TEMPLATES.add("template/controller.java.vm");
+        add("template/index.js.vm");
+        add("template/index.vue.vm");
+        add("template/mapper.xml.vm");
+        add("template/biz.java.vm");
+        add("template/entity.java.vm");
+        add("template/mapper.java.vm");
+        add("template/controller.java.vm");
     }};
 
     /**

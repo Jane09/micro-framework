@@ -49,10 +49,8 @@ public class GeneratorController {
         if(StringUtils.isBlank(tables)) {
             throw new RuntimeException("tables parameters can not be null");
         }
-        tableNames = JSON.parseArray(tables).toArray(tableNames);
-
+        tableNames = tables.split(",");
         byte[] data = generatorService.generatorCode(tableNames);
-
         response.reset();
         response.setHeader("Content-Disposition", "attachment; filename=\"ag-admin-code.zip\"");
         response.addHeader("Content-Length", "" + data.length);

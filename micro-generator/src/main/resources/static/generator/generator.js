@@ -107,7 +107,11 @@ layui.use(['form', 'layedit', 'laydate'], function () {
             for(var i=0;i<generator.currentItems.length;i++){
                 tableNames.push(generator.currentItems[i].tableName);
             }
-            location.href = "/base/generator/code?tables=" + JSON.stringify(tableNames);
+            var ts = "";
+            for(index in tableNames) {
+                ts = ts+","+tableNames[index];
+            }
+            location.href = "/base/generator/code?tables=" + ts;
         }
     });
 });
