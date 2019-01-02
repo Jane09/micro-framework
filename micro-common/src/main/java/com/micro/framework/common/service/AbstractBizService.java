@@ -15,7 +15,7 @@ import java.util.List;
  * @author tb
  * @date 2018/12/27 16:21
  */
-public abstract class TemplateBizService<M extends Mapper<T>,T> implements BizService<T> {
+public abstract class AbstractBizService<M extends Mapper<T>,T> implements BizService<T> {
 
 
     @Setter
