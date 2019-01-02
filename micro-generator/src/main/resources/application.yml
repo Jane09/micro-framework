@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: micro-generator
+# mysql
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ag_auth?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: 123456
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  thymeleaf:
+    mode: LEGACYHTML5
+    cache: false
+server:
+  port: 777
+  tomcat:
+    max-threads: 10
+    min-spare-threads: 10
+mybatis:
+  mapper-locations: classpath:mapper/**/*.xml
