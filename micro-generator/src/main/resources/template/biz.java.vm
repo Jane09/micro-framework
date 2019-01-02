@@ -1,4 +1,4 @@
-package ${package}.biz;
+package ${package}.service;
 
 import org.springframework.stereotype.Service;
 

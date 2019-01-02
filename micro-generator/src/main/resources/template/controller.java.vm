@@ -1,4 +1,4 @@
-package ${package}.rest;
+package ${package}.controller;
 
 import com.micro.framework.common.controller.AbstractController;
 import ${package}.biz.${className}Biz;
