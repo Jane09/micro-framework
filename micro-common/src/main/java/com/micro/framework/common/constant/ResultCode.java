@@ -1,4 +1,4 @@
-package framework.common.constant;
+package com.micro.framework.common.constant;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

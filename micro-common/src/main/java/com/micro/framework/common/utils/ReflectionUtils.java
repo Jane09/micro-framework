@@ -1,4 +1,4 @@
-package framework.common.utils;
+package com.micro.framework.common.utils;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.Validate;

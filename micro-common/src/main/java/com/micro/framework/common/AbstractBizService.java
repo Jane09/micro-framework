@@ -1,8 +1,8 @@
-package framework.common;
+package com.micro.framework.common;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
-import framework.common.response.TableResponse;
+import com.micro.framework.common.response.TableResponse;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import tk.mybatis.mapper.common.Mapper;

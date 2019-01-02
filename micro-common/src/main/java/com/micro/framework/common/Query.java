@@ -1,4 +1,4 @@
-package framework.common;
+package com.micro.framework.common;
 
 import lombok.Getter;
 import lombok.Setter;

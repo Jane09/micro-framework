@@ -1,4 +1,4 @@
-package framework.common.constant;
+package com.micro.framework.common.constant;
 
 public enum ResourceType {
     menu,

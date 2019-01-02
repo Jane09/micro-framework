@@ -1,4 +1,4 @@
-package framework.common.handler;
+package com.micro.framework.common.handler;
 
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ResponseBody;

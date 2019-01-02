@@ -1,4 +1,4 @@
-package framework.common.response;
+package com.micro.framework.common.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

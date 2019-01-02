@@ -1,6 +1,6 @@
-package framework.common.handler;
+package com.micro.framework.common.handler;
 
-import framework.common.constant.Global;
+import com.micro.framework.common.constant.Global;
 
 import java.util.HashMap;
 import java.util.Map;

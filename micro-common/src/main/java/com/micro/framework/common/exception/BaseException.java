@@ -1,4 +1,4 @@
-package framework.common.exception;
+package com.micro.framework.common.exception;
 
 /**
  * 基础异常
