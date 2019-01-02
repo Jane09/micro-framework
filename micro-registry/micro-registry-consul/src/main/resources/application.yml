@@ -9,5 +9,7 @@ spring:
       port: 8500
       discovery:
         instance-id: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
+        tags: app=registry-consul
+        service-name: registry-consul
 #        health-check-interval: 15s
 #        healthCheckPath: ${management.server.servlet.context-path}/health
