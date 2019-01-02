@@ -1,0 +1,28 @@
+server:
+  port: 9411
+spring:
+  application:
+    name: micro-trace
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/ag_zipkin?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    continue-on-error: true
+  sleuth:
+    web:
+      client:
+        enabled: true
+    sampler:
+      probability: 1.0 #将采样比例设置为 1.0，也就是全部都需要。默认是 0.1
+  zipkin:
+    base-url: http://localhost:9411/ #Zipkin 服务器的地址
+    enabled: true
+    sender:
+      type: rabbit #kafka web
+  rabbitmq:
+    addresses: localhost
+    port: 5672
+    username:
+    password:
+    virtual-host: sleuth
