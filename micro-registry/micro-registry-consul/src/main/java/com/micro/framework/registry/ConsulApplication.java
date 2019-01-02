@@ -5,6 +5,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 
 /**
+ *
+ * 服务发现
+ * 健康检查
+ * Key/Value 存储
+ * 多数据中心
  * @author tb
  * @date 2018/12/29 15:00
  */
