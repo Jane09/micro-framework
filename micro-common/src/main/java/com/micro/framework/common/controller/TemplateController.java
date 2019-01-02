@@ -1,6 +1,6 @@
 package com.micro.framework.common.controller;
 
-import com.micro.framework.common.AbstractBizService;
+import com.micro.framework.common.service.TemplateBizService;
 import com.micro.framework.common.Query;
 import com.micro.framework.common.handler.ContextHandler;
 import com.micro.framework.common.response.ObjectResponse;
@@ -18,7 +18,7 @@ import java.util.Map;
  * @date 2019/1/2 11:30
  */
 @Slf4j
-public class AbstractBaseController<BizService extends AbstractBizService, Entity> {
+public class TemplateController<BizService extends TemplateBizService, Entity> {
 
     @Autowired
     protected HttpServletRequest request;

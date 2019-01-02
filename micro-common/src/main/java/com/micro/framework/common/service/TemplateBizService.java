@@ -1,7 +1,8 @@
-package com.micro.framework.common;
+package com.micro.framework.common.service;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
+import com.micro.framework.common.Query;
 import com.micro.framework.common.response.TableResponse;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,7 @@ import java.util.List;
  * @author tb
  * @date 2018/12/27 16:21
  */
-public abstract class AbstractBizService<M extends Mapper<T>,T> implements BizService<T> {
+public abstract class TemplateBizService<M extends Mapper<T>,T> implements BizService<T> {
 
 
     @Setter
