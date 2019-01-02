@@ -173,7 +173,7 @@ public final class GeneratorUtils {
         }
 
         if (template.contains("biz.java.vm")) {
-            return packagePath + "biz" + File.separator + className + "Biz.java";
+            return packagePath + "service" + File.separator + className + "Service.java";
         }
         if (template.contains("mapper.java.vm")) {
             return packagePath + "mapper" + File.separator + className + "Mapper.java";
@@ -182,7 +182,7 @@ public final class GeneratorUtils {
             return packagePath + "entity" + File.separator + className + ".java";
         }
         if (template.contains("controller.java.vm")) {
-            return packagePath + "rest" + File.separator + className + "Controller.java";
+            return packagePath + "controller" + File.separator + className + "Controller.java";
         }
         if (template.contains("mapper.xml.vm")) {
             return "main" + File.separator + "resources" + File.separator + "mapper" + File.separator + className + "Mapper.xml";
