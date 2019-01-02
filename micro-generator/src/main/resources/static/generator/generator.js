@@ -74,7 +74,15 @@ generator.select = function (layerTips) {
         generator.currentItems = rows;
         return true;
     } else {
-        layerTips.msg("请至少选中一行");
+        if(!!layerTips) {
+            layerTips.msg("请至少选中一行");
+        }else {
+            if(!!layer) {
+                layer.msg("请至少选中一行")
+            }else {
+                alert("请至少选中一行");
+            }
+        }
         return false;
     }
 };
