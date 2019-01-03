@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 /**
  * 100% 消息传输成功
+ * batch模式提高TPS
  * @author tb
  * @date 2019/1/3 11:42
  */
