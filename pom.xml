@@ -28,6 +28,7 @@
         <module>micro-interface</module>
         <module>micro-generator</module>
         <module>micro-config</module>
+        <module>micro-message</module>
     </modules>
 
     <parent>
