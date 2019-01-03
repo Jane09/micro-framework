@@ -13,7 +13,7 @@ import lombok.Setter;
 public class MessageDTO {
 
     private Long msgId;
-    //关联上一个msgId 判断是否漏传
+    //关联上一个msgId 判断是否漏传，漏传暴露接口直接数据库去查询
     private Long pmsgId;
     private String message;
 }
