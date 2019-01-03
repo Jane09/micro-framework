@@ -57,7 +57,7 @@
             <artifactId>spring-cloud-starter-stream-rabbit</artifactId>
         </dependency>
         <!-- zipkin -->
-        <dependency>
+        <!--<dependency>
             <groupId>io.zipkin.java</groupId>
             <artifactId>zipkin-server</artifactId>
         </dependency>
@@ -72,7 +72,7 @@
         <dependency>
             <groupId>io.zipkin.java</groupId>
             <artifactId>zipkin-autoconfigure-storage-mysql</artifactId>
-        </dependency>
+        </dependency>-->
 
         <dependency>
             <groupId>mysql</groupId>
